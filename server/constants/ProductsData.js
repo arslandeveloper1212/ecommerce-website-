@@ -1,100 +1,78 @@
 const products =[
     {
         id: 1,
-        image: "/img/allpro/a1.png",
+        image: "https://m.media-amazon.com/images/I/71dncPbANKL._AC_UL320_.jpg",
         title: {
-            shortTitle: 'Sandwich Makers',
-            longTitle: 'Amazon SmartBuy Sandwich 01 Grill  (Black)'
+            shortTitle: 'HP 67XL Black High-yield Ink Cartridge',
+            longTitle: 'HP 67XL Black High-yield Ink Cartridge | Works with HP DeskJet 1255, 2700, 4100 Series, HP ENVY 6000, 6400 Series | Eligible for Instant Ink'
           },
         price: "459.00",
-        description: " is a Pk raw silk. It is a long royal blue straight shirt with an hand embellished and screen-printed neckline, with full sleeves. Both are intricately adorned with kora, dabka, zari, crystals and contrasting green embroidery. Gota lace is added to finish the sleeves. To complete the look it is paired with blue pants, which are finished with lace. The dupatta complimenting this is a tissue silk light blue piece.",
+        description: " Original HP Ink is engineered to work with HP printers to provide consistent quality, reliability and value",
         quantity: 1,
         rating: 121,
     },
     {
         id: 2,
-        image: "/img/allpro/a2.png",
+        image: "https://m.media-amazon.com/images/I/6104RMv3lML._AC_UL320_.jpg",
         title: {
-            shortTitle: 'Sandwich Makers',
-            longTitle: 'Amazon SmartBuy Sandwich 01 Grill  (Black)'
+            shortTitle: 'HP 67 Black/Tri-color Ink Cartridges',
+            longTitle: 'HP 67 Black/Tri-color Ink Cartridges (2 Count - Pack of 1) | Works with HP DeskJet 1255, 2700, 4100 Series, HP ENVY 6000, 6400 Series'
           },
         price: "59.00",
-        description: "Meesha is a Pk raw silk. It is a long royal blue straight shirt with an hand embellished and screen-printed neckline, with full sleeves. Both are intricately adorned with kora, dabka, zari, crystals and contrasting green embroidery. Gota lace is added to finish the sleeves. To complete the look it is paired with blue pants, which are finished with lace. The dupatta complimenting this is a tissue silk light blue piece.",
+        description: "Original HP Ink is engineered to work with HP printers to provide consistent quality, reliability and value",
         quantity: 1,
         rating: 121,
     },
     {
-        id: 3,
-        image: "/img/allpro/a3.png",
-        title: {
-            shortTitle: 'Sandwich Makers',
-            longTitle: 'Amazon SmartBuy Sandwich 01 Grill  (Black)'
-          },
-        price: "59.00",
-        description: " is a Pk raw silk. It is a long royal blue straight shirt with an hand embellished and screen-printed neckline, with full sleeves. Both are intricately adorned with kora, dabka, zari, crystals and contrasting green embroidery. Gota lace is added to finish the sleeves. To complete the look it is paired with blue pants, which are finished with lace. The dupatta complimenting this is a tissue silk light blue piece.",
-        quantity: 1,
-        rating: 121,
-    },
-    {
-        id: 4,
-        image: "/img/allpro/a4.png",
-        title: {
-            shortTitle: 'Sandwich Makers',
-            longTitle: 'Amazon SmartBuy Sandwich 01 Grill  (Black)'
-          },
-        price: "59.00",
-        description: " is a Pk raw silk. It is a long royal blue straight shirt with an hand embellished and screen-printed neckline, with full sleeves. Both are intricately adorned with kora, dabka, zari, crystals and contrasting green embroidery. Gota lace is added to finish the sleeves. To complete the look it is paired with blue pants, which are finished with lace. The dupatta complimenting this is a tissue silk light blue piece.",
-        quantity: 1,
-        rating: 121,
-    },
-    {
-        id: 5,
-        image: "/img/allpro/a5.png",
-        title: {
-            shortTitle: 'Sandwich Makers',
-            longTitle: 'Amazon SmartBuy Sandwich 01 Grill  (Black)'
-          },
-        price: "59.00",
-        description: " is a Pk raw silk. It is a long royal blue straight shirt with an hand embellished and screen-printed neckline, with full sleeves. Both are intricately adorned with kora, dabka, zari, crystals and contrasting green embroidery. Gota lace is added to finish the sleeves. To complete the look it is paired with blue pants, which are finished with lace. The dupatta complimenting this is a tissue silk light blue piece.",
-        quantity: 1,
-        rating: 121,
-    },
-    {
-        id: 6,
-        image: "/img/allpro/a6.png",
-        title: {
-            shortTitle: 'Sandwich Makers',
-            longTitle: 'Amazon SmartBuy Sandwich 01 Grill  (Black)'
-          },
-        price: "59.00",
-        description: " is a Pk raw silk. It is a long royal blue straight shirt with an hand embellished and screen-printed neckline, with full sleeves. Both are intricately adorned with kora, dabka, zari, crystals and contrasting green embroidery. Gota lace is added to finish the sleeves. To complete the look it is paired with blue pants, which are finished with lace. The dupatta complimenting this is a tissue silk light blue piece.",
-        quantity: 1,
-        rating: 121,
-    },
-    {
-        id: 7,
-        image: "/img/allpro/a7.png",
-        title: {
-            shortTitle: 'Sandwich Makers',
-            longTitle: 'Amazon SmartBuy Sandwich 01 Grill  (Black)'
-          },
-        price: "59.00",
-        description: " is a Pk raw silk. It is a long royal blue straight shirt with an hand embellished and screen-printed neckline, with full sleeves. Both are intricately adorned with kora, dabka, zari, crystals and contrasting green embroidery. Gota lace is added to finish the sleeves. To complete the look it is paired with blue pants, which are finished with lace. The dupatta complimenting this is a tissue silk light blue piece.",
-        quantity: 1,
-        rating: 121,
-    },
-    {
-        id: 8,
-        image: "/img/allpro/a8.png",
-        title: {
-            shortTitle: 'Sandwich Makers',
-            longTitle: 'Amazon SmartBuy Sandwich 01 Grill  (Black)'
-          },
-        price: "59.00",
-        description: " is a Pk raw silk. It is a long royal blue straight shirt with an hand embellished and screen-printed neckline, with full sleeves. Both are intricately adorned with kora, dabka, zari, crystals and contrasting green embroidery. Gota lace is added to finish the sleeves. To complete the look it is paired with blue pants, which are finished with lace. The dupatta complimenting this is a tissue silk light blue piece.",
-        quantity: 1,
-        rating: 121,
-    },
+      id: 3,
+      image: "https://m.media-amazon.com/images/I/71dncPbANKL._AC_UL320_.jpg",
+      title: {
+          shortTitle: 'HP 67XL Black High-yield Ink Cartridge',
+          longTitle: 'HP 67XL Black High-yield Ink Cartridge | Works with HP DeskJet 1255, 2700, 4100 Series, HP ENVY 6000, 6400 Series | Eligible for Instant Ink'
+        },
+      price: "459.00",
+      description: " Original HP Ink is engineered to work with HP printers to provide consistent quality, reliability and value",
+      quantity: 1,
+      rating: 121,
+  },
+  {
+      id: 4,
+      image: "https://m.media-amazon.com/images/I/6104RMv3lML._AC_UL320_.jpg",
+      title: {
+          shortTitle: 'HP 67 Black/Tri-color Ink Cartridges',
+          longTitle: 'HP 67 Black/Tri-color Ink Cartridges (2 Count - Pack of 1) | Works with HP DeskJet 1255, 2700, 4100 Series, HP ENVY 6000, 6400 Series'
+        },
+      price: "59.00",
+      description: "Original HP Ink is engineered to work with HP printers to provide consistent quality, reliability and value",
+      quantity: 1,
+      rating: 121,
+  },
+  {
+    id: 5,
+    image: "https://m.media-amazon.com/images/I/71dncPbANKL._AC_UL320_.jpg",
+    title: {
+        shortTitle: 'HP 67XL Black High-yield Ink Cartridge',
+        longTitle: 'HP 67XL Black High-yield Ink Cartridge | Works with HP DeskJet 1255, 2700, 4100 Series, HP ENVY 6000, 6400 Series | Eligible for Instant Ink'
+      },
+    price: "459.00",
+    description: " Original HP Ink is engineered to work with HP printers to provide consistent quality, reliability and value",
+    quantity: 1,
+    rating: 121,
+},
+{
+    id: 6,
+    image: "https://m.media-amazon.com/images/I/6104RMv3lML._AC_UL320_.jpg",
+    title: {
+        shortTitle: 'HP 67 Black/Tri-color Ink Cartridges',
+        longTitle: 'HP 67 Black/Tri-color Ink Cartridges (2 Count - Pack of 1) | Works with HP DeskJet 1255, 2700, 4100 Series, HP ENVY 6000, 6400 Series'
+      },
+    price: "59.00",
+    description: "Original HP Ink is engineered to work with HP printers to provide consistent quality, reliability and value",
+    quantity: 1,
+    rating: 121,
+},
+    
+   
     
     ]
     
