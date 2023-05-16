@@ -57,7 +57,7 @@ const products =[
     price: "459.00",
     description: " Original HP Ink is engineered to work with HP printers to provide consistent quality, reliability and value",
     quantity: 1,
-    rating: 121,
+    rating: 21,
 },
 {
     id: 6,
@@ -69,7 +69,7 @@ const products =[
     price: "59.00",
     description: "Original HP Ink is engineered to work with HP printers to provide consistent quality, reliability and value",
     quantity: 1,
-    rating: 121,
+    rating: 1251,
 },
     
    
