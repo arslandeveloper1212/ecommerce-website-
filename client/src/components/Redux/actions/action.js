@@ -14,3 +14,4 @@ export const getProducts = () => async(dispatch) => {
             dispatch({type:"FAILED_GET_PRODUCTS",payload: err.response})
     }   
 }
+

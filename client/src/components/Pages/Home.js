@@ -1,16 +1,32 @@
 import React, { useEffect } from 'react'
 import { getProducts } from '../Redux/actions/action'
+import { ADD } from '../Redux/actions/cartaction'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import "./Home.css"
 
+
 const Home = () => {
     const dispatch = useDispatch();
     const { productdata } = useSelector((state) => state.getProductdata.products)
-    console.log(productdata);
+   
+    // console.log(productdata);
+   
+   
+   
     useEffect(() => {
         dispatch(getProducts());
+       
     }, [dispatch])
+
+
+   
+
+const addcart = (e)=>{
+    dispatch(ADD(e));
+    console.log(e);
+}
+    
 
 
 
@@ -40,7 +56,7 @@ const Home = () => {
                                                         /></h4></Link>
                                                         <p className="card-text mt-4">{item.description}</p>
                                                         <h4 className='price text-secondary mb-3'>${item.price} </h4>
-                                                        <button className='col-12 btn_cart'>Add to Cart</button>
+                                                        <button className='col-12 btn_cart' onClick={()=>addcart(item)}>Add to Cart</button>
 
                                                     </div>
 
