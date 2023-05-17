@@ -17,16 +17,19 @@ const Navbaar = () => {
     navigate("/login")
   }
 
+ 
+
+
   return (
-    <div>
+    <div className='bg_navbaar bg-dark pb-2'>
       <div className='container'>
         <div className='row'>
           <div className=' mt-3 navbaar_handle d-flex justify-content-between align-items-center'>
             <div className='logo'>
-              <Link to="/"><h3>Ecommerce</h3></Link>
+              <Link to="/" className='text-decoration-none btn_color_yellow'><h2>Ecommerce</h2></Link>
             </div>
             <div className='right_content d-flex align-items-center gap'>
-              <Badge badgeContent={4} color="primary">
+              <Badge badgeContent={4} color="primary" style={{color: "white"}}>
                 <ShoppingCartIcon />
               </Badge>
             

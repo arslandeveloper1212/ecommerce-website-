@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import {TextField, Typography} from '@mui/material';
-
+import {Link} from 'react-router-dom';
 const SignIn = () => {
+
+
+ 
 
   const [state, setState]= useState({
     
@@ -10,6 +13,8 @@ const SignIn = () => {
     password: "",
     
   })
+
+  
 
   const HandleChange = (e)=>{
     const name = e.target.name
@@ -55,7 +60,7 @@ const SignIn = () => {
  
   <TextField id="outlined-basic" fullWidth label="Email" name='email' value={state.email} onChange={HandleChange} variant="outlined" />
   <TextField id="outlined-basic" fullWidth label="Password" name='password' value={state.password} onChange={HandleChange} variant="outlined" />
-
+  <span className='mt-3'>You have not account  <Link to="/register">SignUp</Link> </span>
   <button className='btn_single_cart_length'>Login</button>
   
   </Box>

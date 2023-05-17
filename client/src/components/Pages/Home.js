@@ -34,7 +34,7 @@ const Home = () => {
                                                         <h5 className="card-title mb-4">{item.title.shortTitle}</h5>
                                                         <Link to={`/cart/${item.id}`}>
                                                         <h4><img src={item.image} alt='title'
-                                                            style={{ height: "100px", objectFit: "contain", backgroundPosition: "center", margin: "auto", display: "flex" }}
+                                                            style={{ height: "300px", objectFit: "contain", backgroundPosition: "center", margin: "auto", display: "flex", justifyContent:"center" }}
 
 
                                                         /></h4></Link>
