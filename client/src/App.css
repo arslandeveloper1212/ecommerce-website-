@@ -31,6 +31,19 @@
     transition: 0.3s ease-in;
 }
 
+.btn_single_cart_length{
+    padding: 10px 30px;
+    background-color: #F7CA00;
+    border: 1px solid #F7CA00;
+}
+
+.btn_single_cart_length:hover{
+    border: 1px solid #F7CA00;
+    background-color: white;
+    color: black;
+    transition: 0.3s ease-in;
+}
+
 .gap{
     gap:30px
 }

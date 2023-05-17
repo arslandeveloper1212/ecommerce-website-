@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { getProducts } from '../Redux/actions/action'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import "./Home.css"
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -25,25 +26,26 @@ const Home = () => {
                                     return (
 
                                         <div key={i}>
-                                            <Link to={`/cart/${item.id}`}>
-                                                <div className="card" style={{ width: "22rem", textDecoration:"none" }}>
+                                           
+                                                <div className="card" style={{ width: "22rem" }}>
 
                                                     <div className="card-body">
 
                                                         <h5 className="card-title mb-4">{item.title.shortTitle}</h5>
+                                                        <Link to={`/cart/${item.id}`}>
                                                         <h4><img src={item.image} alt='title'
                                                             style={{ height: "100px", objectFit: "contain", backgroundPosition: "center", margin: "auto", display: "flex" }}
 
 
-                                                        /></h4>
+                                                        /></h4></Link>
                                                         <p className="card-text mt-4">{item.description}</p>
-                                                        <h4 className='price text-center text-secondary'>$ {item.price} </h4>
+                                                        <h4 className='price text-secondary mb-3'>${item.price} </h4>
                                                         <button className='col-12 btn_cart'>Add to Cart</button>
 
                                                     </div>
 
                                                 </div>
-                                                </Link>
+                                                
                                         </div>
                                           
                         )
