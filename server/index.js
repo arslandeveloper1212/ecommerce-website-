@@ -10,7 +10,7 @@ require("./db/conn")
 const DefaultData = require("./defaultdata");
 const router = require("./router/routes")
 const Products = require("./models/ProductsSchema");
-
+const userModel = require("./models/userSchema");
 
 app.use(express.json());
 app.use(cors());

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Products = require("../models/ProductsSchema");
-
+const userModel = require("../models/userSchema");
 //getproductsdata api
 router.get("/getproducts", async(req,res)=>{
     try{

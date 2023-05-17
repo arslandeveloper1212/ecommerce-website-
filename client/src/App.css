@@ -44,6 +44,10 @@
     transition: 0.3s ease-in;
 }
 
+.btn_color_yellow{
+    color: #F7CA00 !important;
+}
+
 .gap{
     gap:30px
 }

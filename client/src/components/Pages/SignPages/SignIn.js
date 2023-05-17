@@ -5,10 +5,10 @@ import {TextField, Typography} from '@mui/material';
 const SignIn = () => {
 
   const [state, setState]= useState({
-    name: "",
+    
     email: "",
     password: "",
-    cpassword: "",
+    
   })
 
   const HandleChange = (e)=>{
@@ -52,10 +52,10 @@ const SignIn = () => {
    
   >
     <Typography variant='h4' className='typography_sign' mt={2} mb={2}>SignIn</Typography>
-  <TextField id="outlined-basic" fullWidth label="Name" name='name' value={state.name} onChange={HandleChange} variant="outlined" />
+ 
   <TextField id="outlined-basic" fullWidth label="Email" name='email' value={state.email} onChange={HandleChange} variant="outlined" />
   <TextField id="outlined-basic" fullWidth label="Password" name='password' value={state.password} onChange={HandleChange} variant="outlined" />
-  <TextField id="outlined-basic" fullWidth label="Confirm Password" name='cpassword' value= {state.cpassword} onChange={HandleChange} variant="outlined" />
+
   <button className='btn_single_cart_length'>Login</button>
   
   </Box>
