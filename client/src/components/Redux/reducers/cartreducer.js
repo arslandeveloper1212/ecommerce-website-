@@ -9,6 +9,14 @@ const INIT_STATE ={
                 ...state,
                     carts:[...state.carts,action.payload]
             }
+        case "RMV_CART":
+
+        const data = state.carts.filter((elem)=>elem.id !== action.payload)
+        return{
+            ...state,
+            carts: data
+        }
+
             default:
                 return state
     }

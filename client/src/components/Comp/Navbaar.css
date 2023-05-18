@@ -1,0 +1,13 @@
+@media screen and (min-width:576px) {
+    .small_trash_deleteicon{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .large_trash_deleteicon{
+        display: none !important;
+    }
+}
+
+

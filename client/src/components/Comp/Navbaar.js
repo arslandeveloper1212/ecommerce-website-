@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from "react-router-dom"
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate, NavLink, useParams } from "react-router-dom"
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Button from '@mui/material/Button';
@@ -7,12 +7,19 @@ import Stack from '@mui/material/Stack';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import CloseIcon from '@mui/icons-material/Close';
-import { useSelector } from 'react-redux';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { useDispatch, useSelector } from 'react-redux';
+import "./Navbaar.css"
+import { DLT } from '../Redux/actions/cartaction';
 
 const Navbaar = () => {
 
+  const dispatch = useDispatch();
 
-  const { carts } = useSelector((state) => state.cartdata)
+  const [price, setPrice] = useState(0)
+  console.log(price)
+
+  const { carts} = useSelector((state) => state.cartdata)
 
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -37,7 +44,21 @@ const Navbaar = () => {
   }
 
 
+  const removeCart = (id) => {
+    dispatch(DLT(id))
+  }
 
+  const total = ()=>{
+    let price = 0;
+    carts.map((e,i)=>{
+      price = e.price + price
+    });
+    setPrice(price);
+  }
+
+  useEffect(()=>{
+    total();
+  },[total])
 
   return (
     <div className='bg_navbaar bg-dark pb-2'>
@@ -75,23 +96,42 @@ const Navbaar = () => {
                   <div style={{ padding: "10px", width: "24rem" }}>
                     <div className='badge_inside_card_showing text-center mt-3'>
                       <h5>Shopping Cart Page</h5>
+                      <CloseIcon style={{ position: "absolute", right: "20", top: "20" }} onClick={handleClose} />
                     </div>
                     <div className='badge_content_controls mt-5 mb-5 px-2'>
                       {
                         carts.map((e, index) => {
                           return (
                             <div key={index} className='d-flex align-items-center'>
-                              <img src={e.image} alt='title' className='gap' style={{ width: "100px", paddingRight: "13px" }} />
+                              <Link to={`/cart/${e.id}`}>
+                                <img src={e.image} alt='title' className='gap' style={{ width: "100px", paddingRight: "13px" }} onClick={handleClose} />
+                              </Link>
                               <div className='d-flex flex-column'>
-                                <h5 style={{ fontSize: "15px" }}>{e.title.shortTitle}</h5>
+                                <h5 style={{ fontSize: "15px", marginTop: "20px" }}>{e.title.shortTitle}</h5>
                                 <h5 style={{ fontSize: "20px" }} >{e.price}</h5>
-                                
-                               
+                                <div className='btn_quantity d-flex'>
+                                  <button className='btn '> + </button>
+                                  <h5 className='mt-1'>{e.quantity}</h5>
+                                  <button className='btn'> - </button>
+                                  <button className='btn btn-danger large_trash_deleteicon' onClick={() => removeCart(e.id)} >Remove</button>
+                                </div>
+                                <DeleteIcon className='mb-3 small_trash_deleteicon' style={{ color: "red" }} onClick={() => removeCart(e.id)}  />
+
+
+
                               </div>
+
+                             
                             </div>
+
                           )
                         })
                       }
+                      <div className='total d-flex justify-content-evenly mt-5 '>
+                      <h4>Total:</h4>
+                      <h4>$ 300</h4>
+                      </div>
+                     
                     </div>
 
 

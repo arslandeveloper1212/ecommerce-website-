@@ -31,6 +31,20 @@
     transition: 0.3s ease-in;
 }
 
+.btn_single_cart_outline{
+    border: 1px solid #F7CA00;
+    background-color: white;
+    color: black;
+    transition: 0.3s ease-in;
+    padding: 10px 20px;
+}
+
+.btn_single_cart_outline:hover{
+    padding: 10px 20px;
+    background-color: #F7CA00;
+    border: 1px solid #F7CA00;
+}
+
 .btn_single_cart_length{
     padding: 10px 30px;
     background-color: #F7CA00;
@@ -43,6 +57,9 @@
     color: black;
     transition: 0.3s ease-in;
 }
+
+
+
 
 .btn_color_yellow{
     color: #F7CA00 !important;
