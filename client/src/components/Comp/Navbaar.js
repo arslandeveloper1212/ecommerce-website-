@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import "./Navbaar.css"
 import { DLT } from '../Redux/actions/cartaction';
 
+
 const Navbaar = () => {
 
   const dispatch = useDispatch();
@@ -19,7 +20,8 @@ const Navbaar = () => {
   const [price, setPrice] = useState(0)
   console.log(price)
 
-  const { carts} = useSelector((state) => state.cartdata)
+  const getdata = useSelector((state) => state.cartdata.carts)
+
 
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -48,17 +50,17 @@ const Navbaar = () => {
     dispatch(DLT(id))
   }
 
-  const total = ()=>{
+  const total = () => {
     let price = 0;
-    carts.map((e,i)=>{
+    getdata.map((e, i) => {
       price = e.price + price
     });
     setPrice(price);
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     total();
-  },[total])
+  }, [total])
 
   return (
     <div className='bg_navbaar bg-dark pb-2'>
@@ -69,7 +71,7 @@ const Navbaar = () => {
               <Link to="/" className='text-decoration-none btn_color_yellow'><h2>Ecommerce</h2></Link>
             </div>
             <div className='right_content d-flex align-items-center gap'>
-              <Badge badgeContent={carts.length} color="primary" style={{ color: "white", fontSize: "25px" }}
+              <Badge badgeContent={getdata.length} color="primary" style={{ color: "white", fontSize: "25px" }}
                 id="basic-button"
                 aria-controls={open ? 'basic-menu' : undefined}
                 aria-haspopup="true"
@@ -91,19 +93,20 @@ const Navbaar = () => {
                 }}
               >
 
-                {carts.length ?
+                {getdata.length ?
 
                   <div style={{ padding: "10px", width: "24rem" }}>
                     <div className='badge_inside_card_showing text-center mt-3'>
                       <h5>Shopping Cart Page</h5>
+                      <hr></hr>
                       <CloseIcon style={{ position: "absolute", right: "20", top: "20" }} onClick={handleClose} />
                     </div>
-                    <div className='badge_content_controls mt-5 mb-5 px-2'>
+                    <div className='badge_content_controls mt-3 mb-3 px-2'>
                       {
-                        carts.map((e, index) => {
+                        getdata.map((e, index) => {
                           return (
                             <div key={index} className='d-flex align-items-center'>
-                              <Link to={`/cart/${e.id}`}>
+                              <Link to={`/shoppingcart/${e.id}`}>
                                 <img src={e.image} alt='title' className='gap' style={{ width: "100px", paddingRight: "13px" }} onClick={handleClose} />
                               </Link>
                               <div className='d-flex flex-column'>
@@ -115,23 +118,25 @@ const Navbaar = () => {
                                   <button className='btn'> - </button>
                                   <button className='btn btn-danger large_trash_deleteicon' onClick={() => removeCart(e.id)} >Remove</button>
                                 </div>
-                                <DeleteIcon className='mb-3 small_trash_deleteicon' style={{ color: "red" }} onClick={() => removeCart(e.id)}  />
+                                <DeleteIcon className='mb-3 small_trash_deleteicon' style={{ color: "red" }} onClick={() => removeCart(e.id)} />
 
 
 
                               </div>
 
-                             
+
                             </div>
 
                           )
                         })
                       }
-                      <div className='total d-flex justify-content-evenly mt-5 '>
-                      <h4>Total:</h4>
-                      <h4>$ 300</h4>
+                      <hr></hr>
+                      <div className='total d-flex justify-content-evenly' >
+                        <h4>Total:</h4>
+                        <h4>$ {price}</h4>
+                        
                       </div>
-                     
+                      <hr></hr>
                     </div>
 
 

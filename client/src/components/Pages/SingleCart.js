@@ -1,14 +1,15 @@
 import { Rating } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 
-import { useDispatch } from 'react-redux'
+
 const SingleCart = () => {
   const { id } = useParams("");
   // console.log(id)
 
-  const dispatch = useDispatch();
-
+ 
+ 
  
 
   const [intdata, SetIntdata] = useState([]);
@@ -65,8 +66,9 @@ const SingleCart = () => {
 
 
             <div className=''>
-              <button className='btn_single_cart'>Add to Cart</button>
-             
+            <Link to= {`/shoppingcart/${id}`}>
+            <button className='btn_single_cart'>Add to Cart</button>
+            </Link>  
             </div>
           </div>
         </div>
