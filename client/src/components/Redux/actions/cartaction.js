@@ -15,7 +15,7 @@ export const DLT = (id)=>{
 }
 
 //remove items -sign
-export const REMOVE = (iteam)=>{
+export const REMOVESIGN = (iteam)=>{
     return{
         type: "RMV_ONE",
         payload: iteam,

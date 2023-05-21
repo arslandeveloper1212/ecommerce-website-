@@ -10,12 +10,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useDispatch, useSelector } from 'react-redux';
 import "./Navbaar.css"
-import { DLT } from '../Redux/actions/cartaction';
+import { ADD, DLT } from '../Redux/actions/cartaction';
 
 
 const Navbaar = () => {
 
-  const dispatch = useDispatch();
+
 
   const [price, setPrice] = useState(0)
   console.log(price)
@@ -33,6 +33,7 @@ const Navbaar = () => {
     setAnchorEl(null);
   };
 
+  const dispatch = useDispatch();
 
 
   const navigate = useNavigate();
@@ -61,6 +62,8 @@ const Navbaar = () => {
   useEffect(() => {
     total();
   }, [total])
+
+
 
   return (
     <div className='bg_navbaar bg-dark pb-2'>
@@ -113,9 +116,9 @@ const Navbaar = () => {
                                 <h5 style={{ fontSize: "15px", marginTop: "20px" }}>{e.title.shortTitle}</h5>
                                 <h5 style={{ fontSize: "20px" }} >{e.price}</h5>
                                 <div className='btn_quantity d-flex'>
-                                  <button className='btn '> + </button>
-                                  <h5 className='mt-1'>{e.quantity}</h5>
-                                  <button className='btn'> - </button>
+                                 
+                                  <h5 className='mt-1 mx-3'> Quantity: {e.quantity}</h5>
+                                  
                                   <button className='btn btn-danger large_trash_deleteicon' onClick={() => removeCart(e.id)} >Remove</button>
                                 </div>
                                 <DeleteIcon className='mb-3 small_trash_deleteicon' style={{ color: "red" }} onClick={() => removeCart(e.id)} />
